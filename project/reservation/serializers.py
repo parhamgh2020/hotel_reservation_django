@@ -39,8 +39,8 @@ class AvailableRoomListSerializer(serializers.Serializer):
     def to_internal_value(self, data):
         try:
             return {
-                'start_date': datetime.strptime(data['start_date'].strip(), '%Y-%m-%d').date(),
-                'end_date': datetime.strptime(data['end_date'].strip(), '%Y-%m-%d').date(),
+                'start_date': datetime.strptime(str(data['start_date']).strip(), '%Y-%m-%d').date(),
+                'end_date': datetime.strptime(str(data['end_date']).strip(), '%Y-%m-%d').date(),
             }
         except ValueError:
             raise serializers.ValidationError('Invalid date format, must be YYYY-MM-DD.')
