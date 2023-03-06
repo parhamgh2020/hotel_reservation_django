@@ -22,7 +22,11 @@ def validate_reservation_date(check_in, check_out, room):
     cond2 = Q(check_in__lte=check_in,
               check_out__gte=check_out,
               room=room)
-    reservation = Reservation.objects.filter(cond1 | cond2)
+    cond3 = Q(check_in__range=[check_in, check_out],
+              room=room)
+    cond4 = Q(check_out__range=[check_in, check_out],
+              room=room)
+    reservation = Reservation.objects.filter(cond1 | cond2 | cond3 | cond4)
     if reservation:
         raise ValidationError('A reservation with this date range already reserved.')
 
