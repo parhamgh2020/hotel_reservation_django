@@ -1,3 +1,4 @@
+from django.db.models import Q
 from rest_framework.exceptions import ValidationError
 
 from .models import Reservation
@@ -15,9 +16,13 @@ def validate_reservation_date(check_in, check_out, room):
     - room (int): the ID of the room for the reservation
     """
     validate_arrangement_date(check_in, check_out)
-    reservation = Reservation.objects.filter(check_in__range=[check_in, check_out],
-                                             check_out__range=[check_in, check_out],
-                                             room=room)
+    cond1 = Q(check_in__range=[check_in, check_out],
+              check_out__range=[check_in, check_out],
+              room=room)
+    cond2 = Q(check_in__lte=check_in,
+              check_out__gte=check_out,
+              room=room)
+    reservation = Reservation.objects.filter(cond1 | cond2)
     if reservation:
         raise ValidationError('A reservation with this date range already reserved.')
 
