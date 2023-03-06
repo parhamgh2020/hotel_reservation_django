@@ -7,12 +7,12 @@ to install dependency:
 first make virtual environment 
 install dependency by: pip install -r requirement 
 
-for make sqlite
+to make sqlite
 go to project directory 
 run: python3 ./management makemigrations
 run: python3 ./management migrate
 
-for run project:
+to run project:
 go to project directory 
 run: python3 ./manage.py runserver 
 
