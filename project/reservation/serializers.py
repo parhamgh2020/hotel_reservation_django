@@ -35,6 +35,7 @@ class ReservationSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class AvailableRoomListSerializer(serializers.Serializer):
+
     def to_internal_value(self, data):
         try:
             return {
