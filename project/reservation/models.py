@@ -52,7 +52,7 @@ class Reservation(models.Model):
     guest = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.guest.username
+        return f"{self.guest.username}, {self.room}"
 
 
 
