@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     # external packages
     "rest_framework",
     "drf_spectacular",
-    "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -130,8 +129,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
-    # YOUR SETTINGS
-    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
     # date format
     "DATE_INPUT_FORMATS": ["YYYY-MM-DD"],
     #
