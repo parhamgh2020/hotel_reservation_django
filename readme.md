@@ -1,6 +1,6 @@
 # Hotel Reservation django
 
-## how run 
+### how to run 
 
 ```
 to install dependency:
