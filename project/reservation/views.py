@@ -6,6 +6,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.pagination import LimitOffsetPagination
 
+from rest_framework import generics
+
 from .models import Hotel, Room, Reservation
 from .serializers import (
     HotelSerializer,
@@ -52,7 +54,7 @@ class ReservationListHTML(mixins.ListModelMixin, viewsets.GenericViewSet):
     renderer_classes = (renderers.AdminRenderer,)
 
 
-class AvailableRoomList(APIView):
+class AvailableRoomList(generics.GenericAPIView):
     """
     API endpoint that returns a list of available rooms for a given date range.
     """
