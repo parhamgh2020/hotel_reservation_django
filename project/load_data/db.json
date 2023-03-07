@@ -1,0 +1,156 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$w5ptHYhTn1f4q39pXheKud$HEDiPvDYxXpz3hC6rnAOgTvtKi589ChRuxQlOr0JKeo=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pgh",
+      "first_name": "parham",
+      "last_name": "gh",
+      "email": "p@p.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-05T17:51:42.227Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$4KsCxfFawvy2nUnKJjznFB$EFbWn6QyVT0VeGdc5+4A30iSYY20RR00/D61fQDw5ZY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "a.a",
+      "first_name": "amir",
+      "last_name": "ay",
+      "email": "a@a.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-05T17:52:02.020Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$8VqLPdEQ2zd1nGhYc8zYHo$wtuMGbfvaUXcgirDrErbaO4cat81MSyEnXsyX5zT+Zs=",
+      "last_login": "2023-03-06T06:43:14.697Z",
+      "is_superuser": true,
+      "username": "parham",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-03-06T06:42:50.991Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "reservation.hotel",
+    "pk": 1,
+    "fields": {
+      "name": "espinas",
+      "owner": "parham",
+      "location": "tehran",
+      "state": "tehran",
+      "country": "iran"
+    }
+  },
+  {
+    "model": "reservation.hotel",
+    "pk": 2,
+    "fields": {
+      "name": "koroosh",
+      "owner": "amir",
+      "location": "kish",
+      "state": "kish",
+      "country": "iran"
+    }
+  },
+  {
+    "model": "reservation.room",
+    "pk": 1,
+    "fields": {
+      "room_type": "1",
+      "capacity": 2,
+      "price": 150,
+      "hotel": 1,
+      "status": "1",
+      "room_number": 150
+    }
+  },
+  {
+    "model": "reservation.room",
+    "pk": 2,
+    "fields": {
+      "room_type": "1",
+      "capacity": 3,
+      "price": 200,
+      "hotel": 1,
+      "status": "1",
+      "room_number": 151
+    }
+  },
+  {
+    "model": "reservation.room",
+    "pk": 3,
+    "fields": {
+      "room_type": "2",
+      "capacity": 2,
+      "price": 200,
+      "hotel": 2,
+      "status": "1",
+      "room_number": 201
+    }
+  },
+  {
+    "model": "reservation.room",
+    "pk": 4,
+    "fields": {
+      "room_type": "1",
+      "capacity": 2,
+      "price": 100,
+      "hotel": 1,
+      "status": "1",
+      "room_number": 500
+    }
+  },
+  {
+    "model": "reservation.reservation",
+    "pk": 12,
+    "fields": {
+      "check_in": "2023-03-05",
+      "check_out": "2023-03-11",
+      "room": 1,
+      "guest": 1
+    }
+  },
+  {
+    "model": "reservation.reservation",
+    "pk": 14,
+    "fields": {
+      "check_in": "2023-03-01",
+      "check_out": "2023-03-02",
+      "room": 1,
+      "guest": 1
+    }
+  },
+  {
+    "model": "reservation.reservation",
+    "pk": 15,
+    "fields": {
+      "check_in": "2023-03-03",
+      "check_out": "2023-03-04",
+      "room": 1,
+      "guest": 1
+    }
+  }
+]

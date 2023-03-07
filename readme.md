@@ -12,6 +12,9 @@ go to project directory
 run: python3 ./management makemigrations
 run: python3 ./management migrate
 
+to load data
+run: python3 ./management loaddata load_data/db.json
+
 to run project:
 go to project directory 
 run: python3 ./manage.py runserver 

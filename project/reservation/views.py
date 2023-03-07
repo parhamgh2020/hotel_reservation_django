@@ -1,12 +1,10 @@
 import numpy as np
 import pandas as pd
+from rest_framework import generics
 from rest_framework import renderers
 from rest_framework import viewsets, mixins
-from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework.pagination import LimitOffsetPagination
-
-from rest_framework import generics
+from rest_framework.response import Response
 
 from .models import Hotel, Room, Reservation
 from .serializers import (
